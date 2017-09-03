@@ -4,7 +4,7 @@ VHM is a bash script for managing virtual hosts on Linux easily.
 ### Installation
 Clone or download the file on your desktop for example. Open a terminal window then launch :
 ```
-$ sudo ./vhost-fr-FR.sh install
+$ sudo ./vhost.sh install
 ```
 Follow the instructions & that's it. Now, your can use it like :
 ```
