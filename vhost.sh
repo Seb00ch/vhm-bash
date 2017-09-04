@@ -121,7 +121,7 @@ edit-vhost ()
 
   echo ""
   read -p "Which project do you want to edit ? (Select a number) " whichEdit
-  if [ "$whichEdit" -ge 1 ] && [ "$whichEdit" -le $i ]; then
+  if [ "$whichEdit" -ge 0 ] && [ "$whichEdit" -le $i ]; then
     echo "* Launch editor..."
     echo "* Editing the virtual host..."
     sudo nano /etc/apache2/sites-available/${sitesAvailable[$whichEdit]}
@@ -159,7 +159,7 @@ remove-vhost ()
 
   echo ""
   read -p "Which project do you want to remove ? (Select a number) " whichEnabled
-  if [ "$whichEnabled" -ge 1 ] && [ "$whichEnabled" -le $i ]; then
+  if [ "$whichEnabled" -ge 0 ] && [ "$whichEnabled" -le $i ]; then
     read -p "Are you sure to want to remove \"${sitesEnabled[$whichEnabled]}\" ? (Y/n) " response
     
     if [ $response = "Y" ]; then
@@ -197,7 +197,7 @@ enable-vhost ()
 
     echo ""
     read -p "Which project would you enable ? (Select a number) " whichAvailable
-    if [ "$whichAvailable" -ge 1 ] && [ "$whichAvailable" -le $entry ]; then
+    if [ "$whichAvailable" -ge 0 ] && [ "$whichAvailable" -le $entry ]; then
       read -p "Are you sure to want to enable \"${sitesAvailable[$whichAvailable]}\" ? (Y/n) " response
 
       if [ $response = "Y" ]; then
@@ -238,7 +238,7 @@ disable-vhost ()
 
     echo ""
     read -p "Which project do you want to disable ? (Select a number) " whichEnabled
-    if [ "$whichEnabled" -ge 1 ] && [ "$whichEnabled" -le $i ]; then
+    if [ "$whichEnabled" -ge 0 ] && [ "$whichEnabled" -le $i ]; then
       read -p "Are you sure to want to disable \"${sitesEnabled[$whichEnabled]}\" ? (Y/n) " response
 
       if [ $response = "Y" ]; then
